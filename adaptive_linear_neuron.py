@@ -171,7 +171,7 @@ def plot_decision_regions(X, y, classifier, resolution=0.02):
 
     Z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
     Z = Z.reshape(xx1.shape)
-    plt.contour(xx1, xx2, Z, alpha=0.4, cmap=cmap)
+    plt.contourf(xx1, xx2, Z, alpha=0.4, cmap=cmap)
     plt.xlim(xx1.min(), xx1.max())
     plt.ylim(xx2.min(), xx2.max())
 
